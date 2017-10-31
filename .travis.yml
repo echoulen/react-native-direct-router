@@ -6,3 +6,11 @@ script:
 cache:
   directories:
     - "node_modules"
+deploy:
+  provider: npm
+  email: echoulen@gmail.com
+  api_key:
+    secure: g7ntMXgyzv9xgOPxwN4oXJpwbb1CYyPqoE+Sb948UYtIXAwbUh51OiA5UzhsnBT+yJ11nDBU0FVs9ruhU3KagZxuwt7vzT1lSfXADN9XIZ76p6i2aVfOjzNFcjV+leJd2y7gCfmr0HUe/nfso72h+e6qLHDVHBHX4LqfIMhqJDWiVIe/oPjbktx8BK59gq7yGY1rRM5GxUQygek6s6hMOX/Bwa8TaEfg3zsgbrhZmdE1cwfpE7tREVkOfvaHGKXrJQJVf47WkixBgxzJcDgfqXD+xyGsjubSCkJ9R1NyJ4B5qbL3a3u0YDLZJI9rGOsXimR6MtPZHPlDKxHsCLD0Ttbkgos2Aob+kOh+KKgWfgsGWIMHX2wm4LT3tE/2upvC6LnbOzx4abeVMcRFN5LXeonH6FU+p9HgkBcXdPrTLzLc7X8X2xQJh9JdOLo8bgKt2/8WENutHLTPy+jM4vKYpUHwpMsefdoLKV2FEKEHXPX7/HUhLmGaHgnpKjtGkm0YSeee+kHYw8JfhTFm9Nd4LcDkXOqjUaQyUnHjy6vRCjO7F44NYwSUTP7Cl3uD6X+9vkBfwAUpDzrJqYYH3HzAO3dxWPV8UbWci9XYjY7v38LmH6j3/490qjV8S8TW7jveDT/agt8Ep8diQzOdDAzNKWpuSwluGyyMOnKXRzZpiKQ=
+  on:
+    tags: true
+  skip_cleanup: true
