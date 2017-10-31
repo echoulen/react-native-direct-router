@@ -1,8 +1,10 @@
 {
-	"name": "react-native-pure-router",
+	"name": "react-native-direct-router",
 	"version": "0.0.1",
 	"main": "./dist/index.js",
-	"private": true,
+	"repository": "git@github.com:echoulen/react-native-pure-router.git",
+	"author": "echoulen <echoulen@gmail.com>",
+	"license": "MIT",
 	"scripts": {
 		"tsc": "tsc",
 		"lint": "tslint -p .",
