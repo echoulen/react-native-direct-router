@@ -2,7 +2,7 @@
 	"name": "react-native-direct-router",
 	"version": "0.0.1",
 	"main": "./dist/index.js",
-	"repository": "git@github.com:echoulen/react-native-pure-router.git",
+	"repository": "git@github.com:echoulen/react-native-direct-router.git",
 	"author": "echoulen <echoulen@gmail.com>",
 	"license": "MIT",
 	"scripts": {
