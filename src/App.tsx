@@ -1,3 +1,4 @@
+import {AppRegistry} from "react-native";
 import * as React from "react";
 import {Router} from "./Router";
 import {RouteConfig} from "./types/RouteConfig";
@@ -36,3 +37,5 @@ export class App extends React.Component<AppProps, AppState> {
         );
     }
 }
+
+AppRegistry.registerComponent("reactNativePureRouter", () => App);
