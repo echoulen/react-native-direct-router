@@ -11,7 +11,8 @@
 		"dev": "npm run clean && npm run watch",
 		"build": "npm run clean && npm run tsc --",
 		"start": "node node_modules/react-native/local-cli/cli.js start",
-		"test": "npm run build && jest"
+		"test": "npm run build && jest",
+		"prepublish": "npm run build"
 	},
 	"dependencies": {
 		"immutable": "^3.8.2",

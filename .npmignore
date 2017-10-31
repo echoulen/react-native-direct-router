@@ -1,0 +1,16 @@
+node_modules/
+ios/
+android/
+**/__tests__/
+src
+dist/App.js
+dist/App.d.ts
+dist/pages/
+.travis.yml
+tsconfig.json
+tslint.json
+.npmignore
+.idea
+app.json
+yarn.lock
+README.md
