@@ -1,5 +1,5 @@
 import * as React from "react";
-import {ScrollView, Text, TouchableOpacity, View} from "react-native";
+import {ScrollView, View} from "react-native";
 import {RouteConfig, RouteConfigScene} from "./types/RouteConfig";
 import * as styles from "./RouterStyles";
 import * as Rx from "rx";
@@ -19,6 +19,10 @@ export interface RouterState {
 export class Router extends React.Component<RouterProps, RouterState> {
     public static go(scene: string): void {
         routerStore.updateCurrentScene(scene);
+    }
+
+    public static back(): void {
+        routerStore.popScene();
     }
 
     private disposables: List<Rx.IDisposable> = List();
@@ -52,16 +56,17 @@ export class Router extends React.Component<RouterProps, RouterState> {
     }
 
     private onCurrentSceneChange(currentScene: string): void {
-        if (currentScene && currentScene !== this.state.currentScene) {
+        if (currentScene !== this.state.currentScene) {
             this.setState({currentScene});
         }
     }
 
     private findCurrentSceneConfig(): RouteConfigScene {
         const scenes = List<RouteConfigScene>(this.props.config.scenes);
-        const currentScene = scenes.find((scene) => scene.name === this.state.currentScene);
+        const targetScene = this.state.currentScene || this.props.config.defaultSceneName;
+        const currentScene = scenes.find((scene) => scene.name === targetScene);
         if (!currentScene) {
-            throw new Error(`${this.state.currentScene} route not found`);
+            throw new Error(`Route ${this.state.currentScene} not found`);
         }
 
         return currentScene;

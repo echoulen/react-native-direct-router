@@ -9,6 +9,10 @@ export interface TestAState {
 
 export class TestA extends React.Component<TestAProps, TestAState> {
     public render() {
-        return <View><Text>AAA</Text></View>;
+        return (
+            <View style={{height: 1000, backgroundColor: "grey"}}>
+                <Text>AAA</Text>
+            </View>
+        );
     }
 }
