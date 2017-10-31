@@ -14,7 +14,7 @@ export interface AppState {
 }
 
 export class App extends React.Component<AppProps, AppState> {
-    private config: RouteConfig = {
+    public static config: RouteConfig = {
         defaultSceneName: "Route-A",
         scenes: [
             {
@@ -33,7 +33,7 @@ export class App extends React.Component<AppProps, AppState> {
     };
     public render() {
         return (
-            <Router config={this.config} />
+            <Router config={App.config} />
         );
     }
 }

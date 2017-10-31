@@ -1,5 +1,5 @@
 import * as React from "react";
-import {ScrollView, View} from "react-native";
+import {ImageStyle, ScrollView, TextStyle, View, ViewStyle} from "react-native";
 import {RouteConfig, RouteConfigScene} from "./types/RouteConfig";
 import * as styles from "./RouterStyles";
 import * as Rx from "rx";
@@ -8,6 +8,9 @@ import {List} from "immutable";
 
 export interface RouterProps {
     config?: RouteConfig;
+    style?: {
+        [key: string]: ViewStyle | TextStyle | ImageStyle;
+    };
 }
 
 export interface RouterState {
@@ -17,8 +20,8 @@ export interface RouterState {
 }
 
 export class Router extends React.Component<RouterProps, RouterState> {
-    public static go(scene: string): void {
-        routerStore.updateCurrentScene(scene);
+    public static go(scene: string, params?: any): void {
+        routerStore.updateCurrentScene(scene, params);
     }
 
     public static back(): void {
@@ -44,13 +47,12 @@ export class Router extends React.Component<RouterProps, RouterState> {
 
     public render() {
         return (
-            <View style={styles.container}>
+            <View style={[styles.container, this.props.style]}>
                 {this.renderHeaderScene()}
                 <ScrollView>
                     {this.renderCurrentScene()}
                 </ScrollView>
                 {this.renderFooterScene()}
-                {this.props.children}
             </View>
         );
     }
@@ -75,19 +77,25 @@ export class Router extends React.Component<RouterProps, RouterState> {
     private renderHeaderScene() {
         const currentSceneConfig = this.findCurrentSceneConfig();
         if (currentSceneConfig && currentSceneConfig.header) {
-            return React.createElement(currentSceneConfig.header as any);
+            return React.createElement(currentSceneConfig.header as any, this.getParams());
         }
     }
 
     private renderCurrentScene() {
         const currentSceneConfig = this.findCurrentSceneConfig();
-        return React.createElement(currentSceneConfig.scene as any);
+        return React.createElement(currentSceneConfig.scene as any, this.getParams());
     }
 
     private renderFooterScene() {
         const currentSceneConfig = this.findCurrentSceneConfig();
         if (currentSceneConfig && currentSceneConfig.footer) {
-            return React.createElement(currentSceneConfig.footer as any);
+            return React.createElement(currentSceneConfig.footer as any, this.getParams());
         }
+    }
+
+    private getParams(): {params: any} {
+        const currentSceneConfig = this.findCurrentSceneConfig();
+        const params = Object.assign({}, currentSceneConfig.params || {}, routerStore.getParams());
+        return {params};
     }
 }
