@@ -1,8 +1,7 @@
-[![Build Status](https://travis-ci.org/echoulen/react-native-direct-router.svg?branch=master)](https://travis-ci.org/echoulen/react-native-direct-router)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
-
 # react-native-direct-router
-
+[![Build Status](https://travis-ci.org/echoulen/react-native-direct-router.svg?branch=master)](https://travis-ci.org/echoulen/react-native-direct-router)
+[![npm version](https://badge.fury.io/js/react-native-direct-router.svg)](https://badge.fury.io/js/react-native-direct-router)
+[![license](https://img.shields.io/github/license/echoulen/react-native-direct-router.svg)](https://opensource.org/licenses/MIT)
 ### npm
 `npm install react-native-direct-router --save`
 
