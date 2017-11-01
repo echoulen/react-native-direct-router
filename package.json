@@ -6,7 +6,7 @@
   "author": "echoulen <echoulen@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "tsc": "tsc",
+    "tsc": "tsc --project tsconfig.json --declaration",
     "lint": "tslint -p .",
     "watch": "tsc --watch",
     "clean": "rimraf artifacts",

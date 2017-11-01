@@ -14,3 +14,9 @@ tslint.json
 app.json
 yarn.lock
 README.md
+.flowconfig
+.buckconfig
+.babelrc
+.gitattributes
+.gitignore
+.watchmanconfig
