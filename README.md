@@ -65,7 +65,7 @@ export class App extends React.Component<any, any> {
 
 #### Example with javascript
 ```javascript
-import {Router, RouteConfig} from "react-native-pure-router";
+import {Router, RouteConfig} from react-native-direct-router;
 import {TestA} from "./src/pages/TestA";
 import {TestB} from "./src/pages/TestB";
 import {Header} from "./src/pages/Header";
