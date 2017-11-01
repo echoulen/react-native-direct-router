@@ -1,5 +1,5 @@
 import * as React from "react";
-import {ImageStyle, ScrollView, TextStyle, View, ViewStyle} from "react-native";
+import {ImageStyle, TextStyle, View, ViewStyle} from "react-native";
 import {RouteConfig, RouteConfigScene} from "./types/RouteConfig";
 import * as styles from "./RouterStyles";
 import * as Rx from "rx";
@@ -49,9 +49,9 @@ export class Router extends React.Component<RouterProps, RouterState> {
         return (
             <View style={[styles.container, this.props.style]}>
                 {this.renderHeaderScene()}
-                <ScrollView>
+                <View style={styles.container}>
                     {this.renderCurrentScene()}
-                </ScrollView>
+                </View>
                 {this.renderFooterScene()}
             </View>
         );
