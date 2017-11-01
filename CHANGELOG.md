@@ -4,8 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 <a name="0.0.3"></a>
 ## 0.0.3 (2017-10-31)
-
-
+- Fix Content view styles
 
 <a name="0.0.2"></a>
 ## 0.0.2 (2017-10-31)
+- Test deploy version
