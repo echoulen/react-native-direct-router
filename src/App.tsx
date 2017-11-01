@@ -22,12 +22,20 @@ export class App extends React.Component<AppProps, AppState> {
                 scene: TestA,
                 header: Header,
                 footer: Footer,
+                params: {
+                    isShowBack: false,
+                    title: "My App",
+                },
             },
             {
                 name: "Route-B",
                 scene: TestB,
                 header: Header,
                 footer: Footer,
+                params: {
+                    isShowBack: true,
+                    title: "List",
+                },
             },
         ],
     };

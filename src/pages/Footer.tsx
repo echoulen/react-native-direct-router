@@ -11,15 +11,15 @@ export interface FooterState {
 export class Footer extends React.Component<FooterProps, FooterState> {
     public render() {
         return (
-            <View style={{flexDirection: "row"}}>
+            <View style={{flexDirection: "row", padding: 10}}>
                 <TouchableOpacity onPress={this.update("Route-A")} style={{flex: 1, alignItems: "center"}}>
-                    <Text>AAA</Text>
+                    <Text>Home</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={this.update("Route-B")} style={{flex: 1, alignItems: "center"}}>
-                    <Text>BBB</Text>
+                    <Text>List</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={this.update("Route-C")} style={{flex: 1, alignItems: "center"}}>
-                    <Text>CCC</Text>
+                    <Text>Preferences</Text>
                 </TouchableOpacity>
             </View>
         );
