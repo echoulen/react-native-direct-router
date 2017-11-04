@@ -1,5 +1,5 @@
 import * as React from "react";
-import {ScrollView, StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import {ScrollView, StyleSheet, Text, TouchableOpacity} from "react-native";
 import {Range} from "immutable";
 
 export interface TestBProps {
@@ -19,9 +19,9 @@ export class TestB extends React.Component<TestBProps, TestBState> {
 
     public render() {
         return (
-            <View>
-                <Text>test</Text>
-            </View>
+            <ScrollView>
+                {Range(1, 51).toArray().map(TestB.renderItem)}
+            </ScrollView>
         );
     }
 }

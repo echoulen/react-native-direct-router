@@ -4,7 +4,7 @@
 [![npm version](https://badge.fury.io/js/react-native-direct-router.svg)](https://badge.fury.io/js/react-native-direct-router)
 [![license](https://img.shields.io/github/license/echoulen/react-native-direct-router.svg)](https://opensource.org/licenses/MIT)
 
-![](https://media.giphy.com/media/l1JLJOylI3HmRgBBC/giphy.gif)
+![](./react-native-direct-router.gif)
 
 ### npm
 `npm install react-native-direct-router --save`

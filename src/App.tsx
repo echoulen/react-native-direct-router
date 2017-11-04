@@ -6,6 +6,7 @@ import {TestA} from "./pages/TestA";
 import {TestB} from "./pages/TestB";
 import {Footer} from "./pages/Footer";
 import {Header} from "./pages/Header";
+import {TestC} from "./pages/TestC";
 
 export interface AppProps {
 }
@@ -35,6 +36,16 @@ export class App extends React.Component<AppProps, AppState> {
                 params: {
                     isShowBack: true,
                     title: "List",
+                },
+            },
+            {
+                name: "Route-C",
+                scene: TestC,
+                header: Header,
+                footer: Footer,
+                params: {
+                    isShowBack: true,
+                    title: "Preferences",
                 },
             },
         ],
