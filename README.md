@@ -1,4 +1,5 @@
 # react-native-direct-router
+A simple, None layer router
 
 [![Build Status](https://travis-ci.org/echoulen/react-native-direct-router.svg?branch=master)](https://travis-ci.org/echoulen/react-native-direct-router)
 [![npm version](https://badge.fury.io/js/react-native-direct-router.svg)](https://badge.fury.io/js/react-native-direct-router)
