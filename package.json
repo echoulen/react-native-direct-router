@@ -2,12 +2,17 @@
   "name": "react-native-direct-router",
   "version": "0.0.4",
   "main": "./dist/index.js",
-  "repository": "git@github.com:echoulen/react-native-direct-router.git",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:echoulen/react-native-direct-router.git"
+  },
   "author": "echoulen <echoulen@gmail.com>",
   "license": "MIT",
   "scripts": {
     "tsc": "tsc --project tsconfig.json --declaration",
     "lint": "tslint -p .",
+    "lint-fix": "tslint -p . --fix",
     "watch": "tsc --watch",
     "clean": "rimraf artifacts",
     "dev": "npm run clean && npm run watch",
@@ -15,7 +20,7 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "npm run lint && npm run build && jest",
     "release": "standard-version",
-    "prepublish": "npm test"
+    "prepublishOnly": "npm test"
   },
   "dependencies": {
     "immutable": "^3.8.2",
@@ -39,10 +44,19 @@
     "standard-version": "^4.2.0",
     "tslint": "^5.8.0",
     "tslint-react": "^3.2.0",
-    "types": "^0.1.0",
     "typescript": "^2.5.3"
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/echoulen/react-native-direct-router/issues"
+  },
+  "homepage": "https://github.com/echoulen/react-native-direct-router#readme",
+  "keywords": [
+    "typescript",
+    "direct",
+    "router",
+    "react-native"
+  ]
 }
