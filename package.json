@@ -1,6 +1,7 @@
 {
   "name": "react-native-direct-router",
   "version": "0.0.4",
+  "description": "A simple, None layer router",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "repository": {
