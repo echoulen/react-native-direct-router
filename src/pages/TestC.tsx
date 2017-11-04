@@ -17,6 +17,6 @@ export class TestC extends React.Component<TestCProps, TestCState> {
             <View style={{flex: 1, backgroundColor: "#BBBBBB", alignItems: "center", justifyContent: "center"}}>
                 <Text>Preferences Page</Text>
             </View>
-        )
+        );
     }
 }
